@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="header">
+    <h1>Comments # {{index}}</h1>
+  </div>
+  <div class="comments">
+    <ul *ngFor="let item of comments">
+      <div class="list-of-comments">
+        <li>
+          <div class="user-icon"></div>
+          <p class="list-comments">
+            {{item}}
+          </p>
+        </li>
+      </div>
+    </ul>
+  </div>
+  <div class="adding-comment-area">
+    <div class="adding-user-icon"></div>
+    <input type="text"  [(ngModel)]="inputTextComment" (keydown.control.enter)="submit()" class="items-input">
+  </div>
+</div>
